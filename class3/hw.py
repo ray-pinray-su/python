@@ -11,3 +11,12 @@ try:
     print(f"華氏溫度{c}等於攝氏{h}")
 except:
     print("輸入錯誤!")
+
+
+try:
+    f = float(input("請輸入你的華氏溫度:"))
+except:
+    print("輸入錯誤!")
+else:
+    c
+    print(f"華氏溫度{f}等於攝氏溫度{c}")
