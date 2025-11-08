@@ -11,3 +11,9 @@ elif d < 10:
     print("你好笨")
 else:
     print("E")
+
+y = int(input("請輸入數字:"))
+if y % 2 > 0:
+    print("奇數")
+else:
+    print("偶數")
