@@ -7,5 +7,7 @@ elif d > 69 and d < 80:
     print("C")
 elif d > 59 and d < 70:
     print("D")
+elif d < 10:
+    print("你好笨")
 else:
     print("E")
