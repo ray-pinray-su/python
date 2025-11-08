@@ -46,6 +46,8 @@ for j in range(1, 6):  # range(1,6) 可以產生1~5的數字  range1,2,3,4,5
     print(j)
 for k in range(1, 10, 2):  # range(1,10,2) 可以產生1~9的奇數    range=1,3,5,7,9
     print(k)
+
+
 import turtle as t
 
 for m in range(100):
