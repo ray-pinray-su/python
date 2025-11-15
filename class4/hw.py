@@ -14,10 +14,11 @@ if 14.8 <= bmi <= 20.7:
 
 import turtle as t
 
+t.speed(0)
 t.penup()
 t.shape("circle")
 for i in range(100):
-    t.forward(i * 2)
-    t.right(100 - i * 2)
+    t.forward(i + 10)
+    t.right(24)
     t.stamp()
 t.done()
