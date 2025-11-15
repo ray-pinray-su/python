@@ -1,3 +1,4 @@
-for i in range(1, 10):
-    for j in range(1, 10):
-        print(f'{i}x{j}={i*j}')
+#箭頭繪圖
+x = int(input("請輸入箭頭size:"))
+for i in range(x+1):
+    q='*'*
