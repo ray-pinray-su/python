@@ -1,3 +1,6 @@
-x=input("請輸入你的數字:")
-x=int(x)
-print(int((x+1)*x/2))
+x = input("請輸入你的數字:")
+x=int(x)+1
+j = 0
+for i in range(int(x)):
+    j = int(j + i)
+print(j)
