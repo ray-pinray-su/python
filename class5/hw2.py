@@ -1,5 +1,6 @@
 import turtle as t
 
+t.speed(0)
 t.penup()
 for i in range(10):
 
