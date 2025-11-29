@@ -1,9 +1,10 @@
 x = input("輸入開始整數")
-y = input("輸入開始整數")
-for i in range(1, x + 1):
-    if x % i == 0:
-        y += 1
-if y == 2:
-    print("質數")
-else:
-    print("不是質數")
+l = 0
+y = input("輸入結束整數")
+for i in range(int(x), int(y) + 1):
+    for k in range(1, i + 1):
+        if i % k == 0:
+            l += 1
+    if l == 2:
+        print(i)
+    l = 0
