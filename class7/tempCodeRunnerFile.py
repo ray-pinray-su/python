@@ -1,13 +1,3 @@
-x = int(float(input("請輸入數字:")))
-y = 0
-for i in range(1, x + 1):
-    if x % i == 0:
-        y += 1
-if y == 2:
-    print("質數")
-else:
-    print("不是質數")
-
 
 x = input("1.蘋果汁2.柳橙汁3.葡萄汁4.系統關閉" "請輸入編號:")
 while x != "4":
@@ -20,5 +10,3 @@ while x != "4":
     else:
         print("無此選項,請重新輸入")
     x = input("1.蘋果汁2.柳橙汁3.葡萄汁4.系統關閉" "請輸入編號:")
-else:
-    print("系統關閉")
