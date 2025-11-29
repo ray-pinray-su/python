@@ -1,12 +1,10 @@
 
-x = input("1.蘋果汁2.柳橙汁3.葡萄汁4.系統關閉" "請輸入編號:")
-while x != "4":
-    if x == "1":
-        print("商品是蘋果汁")
-    elif x == "2":
-        print("商品是柳橙汁")
-    elif x == "3":
-        print("商品是葡萄汁")
-    else:
-        print("無此選項,請重新輸入")
-    x = input("1.蘋果汁2.柳橙汁3.葡萄汁4.系統關閉" "請輸入編號:")
+
+
+#輸入要跳繩的次數
+jump = int(input("請輸入要跳繩的次數:"))
+for i in range(1, jump + 1):
+    if i % 10 == 0:
+        print("休息一下吧!")
+        continue
+    print(f"第{i}次跳繩")

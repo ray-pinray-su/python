@@ -46,3 +46,23 @@ for i in range(5):  # 外層迴圈
         print(f"i={i}, j={j}")  # 列印i和j的值
 # 這裡的break只會跳出內層的for 迴圈
 # 外層的for迴圈還是會繼續執行
+
+
+# continue
+# 迴圈的continue可以用來跳過當前的迴圈，直接進入下一次迴圈
+# 例如:
+for i in range(5):
+    if i == 2:
+        continue  # 如果i是偶數，跳過本次迴圈
+    print(i)  # 列印奇數
+# 這裡的continue會跳過i等於2的情況，直接進入i等於3迴圈
+# 所以輸出的結果是0,1,3,4
+# continue也可以用在while迴圈中
+# 例如:
+i = 0
+while i < 5:
+    if i == 2:
+        continue  # 如果i是2，跳過本次迴圈
+    print(i)  # 列印i的值
+    i += 1  # 每次迴圈加1
+# continue也要判斷所屬的迴圈,要注意縮排
