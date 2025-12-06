@@ -8,4 +8,5 @@ for i in range(10):
     t.forward(100)
     t.stamp()
     t.home()
+
 t.done()
