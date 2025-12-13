@@ -9,7 +9,6 @@ print(r.randrange(1, 10, 2))  # 隨機取得(1,3,5,7,9)的其中一個數
 # random.randint 的設定範圍方式包含開始和結束
 # randint 不能跳數字，會取得連續範圍內的隨機數
 print(r.randint(1, 10))  # 隨機取得1~10的其中一個數
-
 # 猜數字遊戲
 import random as r
 
