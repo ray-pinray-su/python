@@ -7,7 +7,7 @@ pygame.init()
 # 視窗設定
 WIDTH, HEIGHT = 800, 400
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("小恐龍遊戲 - 長按跳更高")
+pygame.display.set_caption("小恐龍遊戲")
 
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, 40)
@@ -24,7 +24,7 @@ gravity = 1
 # 跳躍蓄力系統
 is_jumping = False
 jump_time = 0
-max_jump_time = 15  # 按越久可跳越高（可調高低）
+max_jump_time = 30  # 按越久可跳越高（可調高低）
 
 # 障礙物
 obstacles = []
