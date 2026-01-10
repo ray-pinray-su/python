@@ -49,11 +49,7 @@ def draw():
 
 
 while True:
-    draw()
-    clock.tick(60)
-    c = +1
-    if c < 160:
-        continue
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -83,6 +79,12 @@ while True:
     if dino.bottom > 350:
         dino.bottom = 350
         dino_y_velocity = 0
+
+    draw()
+    clock.tick(60)
+    c = c + 1
+    if c < 160:
+        continue
 
     # 生成障礙物
     spawn_timer += 1
