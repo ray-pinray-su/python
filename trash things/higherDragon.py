@@ -2,6 +2,7 @@ import pygame
 import random
 import sys
 
+c = 0
 pygame.init()
 
 # 視窗設定
@@ -20,6 +21,7 @@ BLACK = (0, 0, 0)
 dino = pygame.Rect(80, 300, 50, 50)
 dino_y_velocity = 0
 gravity = 1
+
 
 # 跳躍蓄力系統
 is_jumping = False
@@ -47,6 +49,11 @@ def draw():
 
 
 while True:
+    draw()
+    clock.tick(60)
+    c = +1
+    if c < 160:
+        continue
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -96,6 +103,3 @@ while True:
             print("遊戲結束! 分數:", score)
             pygame.quit()
             sys.exit()
-
-    draw()
-    clock.tick(60)

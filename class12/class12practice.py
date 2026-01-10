@@ -28,3 +28,4 @@ while True:
     elif c == 3:
         print("離開程式")
         break
+print("=" * 100)
