@@ -1,42 +1,74 @@
-g = {"蘋果": 25, "香蕉": 30, "橘子": 40}
-l = ["新增水果價格", "修改價格", "刪除", "離開"]
-while True:
-    print("目前價格:")
-    for k, v in g.items():
-        print(f"{k}:{v}")
-    for i, f in enumerate(l):
-        print(f"{i+1}.{f}")
-    t = int(input("請選1-4:"))
-    c = t - 1
+def hello(name: str = "Singular") -> None:  # 函數傳入參數都是區域變數
+    """
+    指令說明區\n
+    這是一個打招呼的函數\n
+    參數:\n
+    name:str-姓名
 
-    def add():
-        n = input("請輸入水果名稱:")
-        p = int(input("請輸入價格:"))
-        g[n] = p
+    回傳:None
 
-    def edit():
-        n = input("請輸入要修改的水果名稱:")
-        if n in g:
-            p = int(input("請輸入新的價格:"))
-            g[n] = p
-        else:
-            print("沒有這水果")
+    範例:hello("Ray")#Hello,Ray!
+    """
+    print(f"Hello,{name}!")
 
-    def delete():
-        n = input("請輸入要刪除的水果名稱:")
-        if n in g:
-            g.pop(n)
-        else:
-            print("沒這水果")
 
-    if c == 0:
-        add()
-    elif c == 1:
-        edit()
-    elif c == 2:
-        delete()
+# 讀取指令說明
+print(hello.__doc__)
+print(hello.__name__)  # 顯示:add函式的名稱
 
-    elif c == 3:
-        print("離開程式")
-        break
-print("=" * 100)
+
+# eval(input())-這個函式可以把輸入的字串當成程式碼來執行
+# 例如:
+ans = eval("5+3")
+print(ans)  # 8
+
+# 這樣就可以讓使用者輸入數學算式,然後計算結果
+# 例如:
+ans = eval(input("請輸入數學算式:"))
+print("計算結果:", ans)
+# 例如輸入:
+# 5+3
+# 顯示:8
+
+# 檔案讀寫
+# 判斷檔案是否存在 - 使用 os.path.isfile() 函式
+import os
+
+# 相對路徑代表相對於目前的工作目錄的路徑
+# 絕對路徑代表完整的路徑
+if os.path.isfile("class17/hw.py"):
+    # C:\Users\User\Desktop\python_test\class17\hw.py
+    print("檔案存在！")
+else:
+    print("檔案不存在！")
+
+# open() 開啟模式
+# r - 讀取模式、檔案必須存在
+# w - 寫入模式、檔案不存在會自動建立
+# a - 附加模式、檔案不存在會自動建立
+# r+ - 讀取與寫入模式、檔案必須存在
+# w+ - 讀取與寫入模式、檔案不存在會自動建立
+# a+ - 讀取與附加模式、檔案不存在會自動建立
+
+# 讀取檔案 - 使用 open() 函式
+# 例如：
+file = open("class18/file_test.py", "r")
+print(file.read())
+file.close()
+
+# 讀取檔案 - 使用 with open() as
+# 例如：
+with open("class18/file_test.py", "r") as file:
+    print(file.read())
+
+# 寫入檔案 - 使用 open() 函式
+# 例如：
+file = open("class18/file_test.py", "w")
+file.write("print('write file test')")
+file.close()
+
+
+# 寫入檔案 - 使用 with open() as
+# 例如：
+with open("class18/file_test.py", "w") as file:
+    file.write("print('Hello World!')")
